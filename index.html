@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
+  <meta property="og:title" content="Cizer Thapa | Flutter Developer" />
+  <meta property="og:description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
+  <meta property="og:type" content="website" />
   <title>Cizer Thapa | Flutter Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -18,7 +22,7 @@
 
 <!-- ── NAV ── -->
 <nav>
-  <a class="nav-logo" href="#hero">
+  <a class="nav-logo" href="#hero" aria-label="Home">
     <!-- Flutter "F" logo -->
     <svg width="22" height="28" viewBox="0 0 66 82" fill="none">
       <polygon points="0,40 28,0 46,0 18,40" fill="#54C5F8"/>
@@ -36,7 +40,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="mailto:cizerthapa@gmail.com" class="nav-contact">Hire Me</a>
-  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- ── HERO ── -->
@@ -50,6 +54,7 @@
     <p class="hero-stack">Flutter · Dart · Java · Clean Architecture</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="CIZER THAPANEWCV.pdf" target="_blank" class="btn btn-outline" download>Download CV</a>
       <button class="btn btn-world">🌍 Explore My Story</button>
       <a href="#contact" class="btn btn-outline">Get In Touch</a>
     </div>
@@ -97,7 +102,7 @@
 </div>
 
 <!-- ── ABOUT ── -->
-<div class="container" id="about">
+<section class="container" id="about">
   <p class="section-eyebrow">// who I am</p>
   <h2 class="section-title">About Me</h2>
   <div class="section-bar"></div>
@@ -114,10 +119,10 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ── EXPERIENCE ── -->
-<div class="container" id="experience">
+<section class="container" id="experience">
   <p class="section-eyebrow">// where I've worked</p>
   <h2 class="section-title">Experience</h2>
   <div class="section-bar"></div>
@@ -165,10 +170,10 @@
       </ul>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ── PROJECTS ── -->
-<div class="container" id="projects">
+<section class="container" id="projects">
   <p class="section-eyebrow">// what I've built</p>
   <h2 class="section-title">Projects</h2>
   <div class="section-bar"></div>
@@ -202,10 +207,10 @@
       <span style="color:var(--text3);font-size:.8rem;">1 month · Team of 5</span>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ── SKILLS ── -->
-<div class="container" id="skills">
+<section class="container" id="skills">
   <p class="section-eyebrow">// my toolkit</p>
   <h2 class="section-title">Skills</h2>
   <div class="section-bar"></div>
@@ -215,10 +220,10 @@
     <div class="skill-cat"><div class="skill-cat-title">Backend & APIs</div><div class="skill-tags"><span class="s-tag">Node.js</span><span class="s-tag">REST API</span><span class="s-tag">MongoDB</span><span class="s-tag">PostgreSQL</span></div></div>
     <div class="skill-cat"><div class="skill-cat-title">Tools & Practices</div><div class="skill-tags"><span class="s-tag">Git</span><span class="s-tag">GitHub</span><span class="s-tag">Agile</span><span class="s-tag">UI/UX</span><span class="s-tag">AWS</span></div></div>
   </div>
-</div>
+</section>
 
 <!-- ── CERTIFICATIONS ── -->
-<div class="container" id="certifications">
+<section class="container" id="certifications">
   <p class="section-eyebrow">// credentials</p>
   <h2 class="section-title">Certifications</h2>
   <div class="section-bar"></div>
@@ -235,10 +240,10 @@
     <div class="cert-item reveal"><div class="cert-ico">🐍</div><div><div class="cert-name">Learning Python</div><div class="cert-meta">LinkedIn Learning · Aug 2023</div></div></div>
     <div class="cert-item reveal"><div class="cert-ico">🈶</div><div><div class="cert-name">Essential Mandarin</div><div class="cert-meta">LinkedIn Learning · Aug 2023</div></div></div>
   </div>
-</div>
+</section>
 
 <!-- ── EXTRAS ── -->
-<div class="container" id="extras">
+<section class="container" id="extras">
   <p class="section-eyebrow">// beyond code</p>
   <h2 class="section-title">Activities & Community</h2>
   <div class="section-bar"></div>
@@ -267,10 +272,10 @@
       </ul>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ── GAMES ── -->
-<div class="container" id="game">
+<section class="container" id="game">
   <p class="section-eyebrow">// mini games</p>
   <h2 class="section-title">Play a Game</h2>
   <div class="section-bar"></div>
@@ -326,10 +331,10 @@
     <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;"><strong style="color:var(--text)">Move mouse / touch</strong> for paddle · Break every Flutter & Dart concept brick · 3 lives!</p>
     <div class="canvas2d-wrap reveal"><canvas id="breaker-canvas" height="420"></canvas></div>
   </div>
-</div>
+</section>
 
 <!-- ── CONTACT ── -->
-<div class="container" id="contact">
+<section class="container" id="contact">
   <p class="section-eyebrow">// let's connect</p>
   <h2 class="section-title">Get In Touch</h2>
   <div class="section-bar"></div>
@@ -345,7 +350,7 @@
       <div class="contact-link" style="cursor:default;"><div class="cl-icon">📍</div><div><div class="cl-label">Location</div><div class="cl-val">Bhaisepati, Lalitpur, Nepal</div></div></div>
     </div>
   </div>
-</div>
+</section>
 
 <footer>
   <p>
@@ -353,8 +358,9 @@
     <svg width="14" height="17" viewBox="0 0 66 82" fill="none" style="vertical-align:middle;margin:0 2px">
       <polygon points="0,40 28,0 46,0 18,40" fill="#54C5F8"/><polygon points="18,40 0,58 18,76 36,76 18,58 36,40" fill="#54C5F8"/><polygon points="18,58 26,50 36,60 28,68" fill="#0175C2"/>
     </svg>
-    Flutter love by <a href="#hero">Cizer Thapa</a> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Lalitpur, Nepal
+    Flutter love by <a href="#hero">Cizer Thapa</a> &nbsp;·&nbsp; <span id="current-year">2025</span> &nbsp;·&nbsp; Lalitpur, Nepal
   </p>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </footer>
 
 <script type="module" src="js/main.js"></script>
