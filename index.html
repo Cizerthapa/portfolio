@@ -4,16 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Cizer Thapa | Flutter Developer" />
   <meta property="og:description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
-  <meta property="og:type" content="website" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Cizer Thapa | Flutter Developer" />
+  <meta property="twitter:description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
+  
   <title>Cizer Thapa | Flutter Developer</title>
+  
+  <!-- Preconnect and Preload Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -39,8 +53,23 @@
     <li><a href="#game">Games</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:cizerthapa@gmail.com" class="nav-contact">Hire Me</a>
-  <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></div>
+  <div style="display:flex;align-items:center;gap:0.75rem;">
+    <a href="mailto:cizerthapa@gmail.com" class="nav-contact magnetic">Hire Me</a>
+    <button class="theme-toggle-btn magnetic" id="theme-toggle" aria-label="Toggle theme">
+      <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- ── HERO ── -->
@@ -53,10 +82,10 @@
     <p class="hero-role">Junior Flutter & Mobile Application Developer</p>
     <p class="hero-stack">Flutter · Dart · Java · Clean Architecture</p>
     <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View My Work</a>
-      <a href="CizerThapaCV.pdf" target="_blank" class="btn btn-outline" download>Download CV</a>
-      <button class="btn btn-world">🌍 Explore My Story</button>
-      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
+      <a href="CizerThapaCV.pdf" target="_blank" class="btn btn-outline magnetic" download>Download CV</a>
+      <button class="btn btn-world magnetic">🌍 Explore My Story</button>
+      <a href="#contact" class="btn btn-outline magnetic">Get In Touch</a>
     </div>
     <!-- Dart code decoration -->
     <div class="hero-code">
@@ -353,7 +382,13 @@
   <div class="contact-wrap reveal">
     <div>
       <p class="contact-intro">I'm actively looking for <strong>junior Flutter developer roles</strong> and open to <strong>freelance mobile projects</strong>. If you have an opportunity or just want to say hello — my inbox is always open.</p>
-      <a href="mailto:cizerthapa@gmail.com" class="btn btn-primary">Send a Message ↗</a>
+      
+      <form class="contact-form" action="https://formspree.io/f/cizerthapa@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+        <input type="email" name="_replyto" placeholder="Your Email" required aria-label="Your Email" />
+        <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
+        <button type="submit" class="btn btn-primary magnetic" style="align-self: flex-start;">Send Message ↗</button>
+      </form>
     </div>
     <div class="contact-links">
       <a href="mailto:cizerthapa@gmail.com" class="contact-link"><div class="cl-icon">📧</div><div><div class="cl-label">Email</div><div class="cl-val">cizerthapa@gmail.com</div></div></a>

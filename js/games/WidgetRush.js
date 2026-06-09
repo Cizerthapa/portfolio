@@ -85,6 +85,7 @@ export default class WidgetRush {
     });
 
     this.gScore = 0;
+    this.bestScore = parseInt(localStorage.getItem('widgetRushBest')) || 0;
     this.gTime = 45;
     this.gRunning = false;
     this.hitCD = 0;
@@ -129,10 +130,15 @@ export default class WidgetRush {
   }
 
   gHUD() {
-    document.getElementById('g-score').textContent = this.gScore;
+    const scoreEl = document.getElementById('g-score');
+    if (scoreEl) {
+      scoreEl.innerHTML = `${this.gScore} <span class="hud-best">Best: ${this.bestScore}</span>`;
+    }
     const t = document.getElementById('g-timer');
-    t.textContent = this.gTime;
-    t.style.color = this.gTime <= 10 ? '#ef4444' : '';
+    if (t) {
+      t.textContent = this.gTime;
+      t.style.color = this.gTime <= 10 ? '#ef4444' : '';
+    }
   }
 
   gShowOv(icon, title, sub) {
@@ -176,7 +182,11 @@ export default class WidgetRush {
       this.gHUD();
       if (this.gTime <= 0) {
         this.gRunning = false;
-        this.gShowOv('🏆', 'Build Success!', 'Final score: ' + this.gScore);
+        if (this.gScore > this.bestScore) {
+          this.bestScore = this.gScore;
+          localStorage.setItem('widgetRushBest', this.bestScore);
+        }
+        this.gShowOv('🏆', 'Build Success!', 'Final score: ' + this.gScore + (this.gScore >= this.bestScore && this.gScore > 0 ? ' (New Best!)' : ''));
         return;
       }
     }

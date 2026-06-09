@@ -62,6 +62,7 @@ export default class BugSquash {
 
     this.bugs = [];
     this.score = 0;
+    this.bestScore = parseInt(localStorage.getItem('bugSquashBest')) || 0;
     this.timeLeft = 30;
     this.running = false;
     this.combo = 0;
@@ -141,7 +142,13 @@ export default class BugSquash {
       if (ts - this.lastSec >= 1000) {
         this.timeLeft--;
         this.lastSec += 1000;
-        if (this.timeLeft <= 0) this.running = false;
+        if (this.timeLeft <= 0) {
+          this.running = false;
+          if (this.score > this.bestScore) {
+            this.bestScore = this.score;
+            localStorage.setItem('bugSquashBest', this.bestScore);
+          }
+        }
       }
       
       if (this.bugs.filter(b => !b.dead).length < 8 && this.frame % Math.max(25, 55 - this.score / 18) === 0) {
@@ -200,7 +207,7 @@ export default class BugSquash {
     this.ctx.fillStyle = '#E8F5FE';
     this.ctx.font = '700 14px JetBrains Mono,monospace';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText('Score: ' + this.score, 14, 26);
+    this.ctx.fillText('Score: ' + this.score + '  |  Best: ' + this.bestScore, 14, 26);
     this.ctx.textAlign = 'right';
     this.ctx.fillStyle = this.timeLeft <= 8 ? '#ef4444' : '#E8F5FE';
     this.ctx.fillText('⏱ ' + this.timeLeft + 's', this.c.width - 14, 26);
@@ -222,7 +229,7 @@ export default class BugSquash {
         this.ctx.fillText('✓ Bugs Squashed!', this.c.width / 2, this.H / 2 - 28);
         this.ctx.fillStyle = '#E8F5FE';
         this.ctx.font = '600 1rem Inter,sans-serif';
-        this.ctx.fillText('Score: ' + this.score, this.c.width / 2, this.H / 2 + 10);
+        this.ctx.fillText('Score: ' + this.score + (this.score >= this.bestScore && this.score > 0 ? ' (New Best!)' : ''), this.c.width / 2, this.H / 2 + 10);
         this.ctx.fillStyle = '#3A607A';
         this.ctx.font = '500 .85rem Inter,sans-serif';
         this.ctx.fillText('Click to play again', this.c.width / 2, this.H / 2 + 46);

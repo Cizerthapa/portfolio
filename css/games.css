@@ -1,0 +1,28 @@
+/* ── GAMES ── */
+.game-tabs { display:flex; gap:.5rem; margin-bottom:1.5rem; flex-wrap:wrap; }
+.game-tab { padding:.55rem 1.25rem; border-radius:9px; font-size:.875rem; font-weight:600; cursor:pointer; background:var(--glass-bg); border:1px solid var(--glass-border); color:var(--text2); transition:all .2s; font-family:'Inter',sans-serif; backdrop-filter: blur(8px); }
+.game-tab:hover { border-color:var(--glass-border-hover); color:var(--text); }
+.game-tab.active { background:rgba(84,197,248,.12); border-color:var(--primary); color:var(--primary); }
+.game-panel { display:none; }
+.game-panel.active { display:block; }
+.game-wrap { position:relative; border-radius:20px; overflow:hidden; border:1px solid var(--glass-border); background:#020810; cursor:default; }
+#game-canvas { display:block; width:100%; height:480px; }
+.game-hud { position:absolute; top:1rem; left:1rem; right:1rem; display:flex; justify-content:space-between; z-index:10; pointer-events:none; }
+.hud-score,.hud-timer { background:rgba(2,10,22,.88); border:1px solid var(--glass-border); border-radius:8px; padding:.4rem 1rem; font-family:'JetBrains Mono',monospace; font-size:.9rem; color:var(--text); }
+.hud-score span { color:var(--primary); font-weight:700; }
+.hud-score .hud-best { color:var(--accent2); font-size: 0.8rem; margin-left: 0.5rem; }
+.hud-timer span { color:var(--primary2); font-weight:700; transition:color .3s; }
+.game-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(2,10,22,.84); backdrop-filter:blur(10px); z-index:20; }
+.game-overlay.hidden { display:none; }
+.game-overlay-box { text-align:center; padding:2.5rem 3rem; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:20px; max-width:340px; }
+.g-ov-icon { font-size:3rem; margin-bottom:.75rem; }
+.game-overlay-box h3 { font-size:1.75rem; font-weight:800; margin-bottom:.5rem; }
+.game-overlay-box p { color:var(--text2); margin-bottom:.5rem; font-size:.95rem; }
+.g-controls { font-family:'JetBrains Mono',monospace; font-size:.78rem; color:var(--text3); margin-bottom:1.5rem !important; }
+.dpad { position:absolute; bottom:1.25rem; right:1.25rem; display:none; grid-template-columns:repeat(3,50px); grid-template-rows:repeat(3,50px); gap:5px; }
+@media(max-width:768px) { .dpad { display:grid; } #game-canvas { height:340px; } }
+.dpad-btn { width:50px; height:50px; border-radius:10px; background:rgba(84,197,248,.12); border:1px solid rgba(84,197,248,.25); color:var(--text); font-size:1.1rem; display:flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; -webkit-tap-highlight-color:transparent; transition:background .15s; }
+.dpad-btn:active { background:rgba(84,197,248,.35); }
+.dpad-up { grid-column:2; grid-row:1; } .dpad-left { grid-column:1; grid-row:2; } .dpad-right { grid-column:3; grid-row:2; } .dpad-down { grid-column:2; grid-row:3; }
+.canvas2d-wrap { position:relative; border-radius:20px; overflow:hidden; border:1px solid var(--glass-border); background:#020810; }
+.canvas2d-wrap canvas { display:block; width:100%; }

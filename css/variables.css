@@ -1,0 +1,65 @@
+/* ── VARIABLES ── */
+:root {
+  --bg:      #020C1A;
+  --bg2:     #041424;
+  --card:    #061828;
+  --card2:   #081E32;
+  --border:  #0C2E50;
+  --border2: #154070;
+  
+  --primary: #54C5F8;   /* Flutter blue */
+  --primary2:#80D8FF;
+  --accent:  #0175C2;   /* Flutter dark blue */
+  --accent2: #29B6F6;
+  --dart:    #00B4D8;   /* Dart teal */
+  
+  --text:    #E8F5FE;
+  --text2:   #7BACC4;
+  --text3:   #3A607A;
+
+  /* Glassmorphism settings */
+  --glass-bg: rgba(6, 24, 40, 0.6);
+  --glass-border: rgba(84, 197, 248, 0.15);
+  --glass-border-hover: rgba(84, 197, 248, 0.4);
+}
+
+[data-theme='light'] {
+  --bg:      #F4F7FB;
+  --bg2:     #E1E8F0;
+  --card:    #FFFFFF;
+  --card2:   #F8FAFC;
+  --border:  #CBD5E1;
+  --border2: #94A3B8;
+  
+  --primary: #0175C2;   /* Darker for light mode contrast */
+  --primary2:#29B6F6;
+  
+  --text:    #0F172A;
+  --text2:   #475569;
+  --text3:   #64748B;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(1, 117, 194, 0.15);
+  --glass-border-hover: rgba(1, 117, 194, 0.4);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+  font-family: 'Inter', system-ui, sans-serif; 
+  background: var(--bg); 
+  color: var(--text); 
+  line-height: 1.7; 
+  overflow-x: hidden; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+/* Focus indicator for accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}

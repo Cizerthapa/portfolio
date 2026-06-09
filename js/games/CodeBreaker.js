@@ -13,6 +13,7 @@ export default class CodeBreaker {
     this.bricks = [];
     this.lives = 0;
     this.score = 0;
+    this.bestScore = parseInt(localStorage.getItem('codeBreakerBest')) || 0;
     this.running = false;
     this.over = false;
     this.mX = null;
@@ -149,6 +150,10 @@ export default class CodeBreaker {
           if (this.lives <= 0) {
             this.over = true;
             this.running = false;
+            if (this.score > this.bestScore) {
+              this.bestScore = this.score;
+              localStorage.setItem('codeBreakerBest', this.bestScore);
+            }
           } else {
             this.ball.x = this.paddle.x + this.paddle.w / 2;
             this.ball.y = this.paddle.y - 22;
@@ -176,6 +181,10 @@ export default class CodeBreaker {
         if (this.bricks.every(b => !b.alive)) {
           this.over = true;
           this.running = false;
+          if (this.score > this.bestScore) {
+            this.bestScore = this.score;
+            localStorage.setItem('codeBreakerBest', this.bestScore);
+          }
         }
       }
     }
@@ -225,7 +234,7 @@ export default class CodeBreaker {
     this.ctx.font = '700 13px JetBrains Mono,monospace';
     this.ctx.textAlign = 'left';
     this.ctx.textBaseline = 'top';
-    this.ctx.fillText('Score: ' + this.score, 12, 10);
+    this.ctx.fillText('Score: ' + this.score + '  |  Best: ' + this.bestScore, 12, 10);
     this.ctx.textAlign = 'right';
     this.ctx.fillText('❤️'.repeat(this.lives) + ' ', this.c.width - 10, 10);
     
@@ -241,7 +250,7 @@ export default class CodeBreaker {
         this.ctx.fillText(won ? '◆ flutter build ✓' : '💀 Build Failed', this.c.width / 2, this.H / 2 - 28);
         this.ctx.fillStyle = '#E8F5FE';
         this.ctx.font = '600 1rem Inter,sans-serif';
-        this.ctx.fillText('Score: ' + this.score, this.c.width / 2, this.H / 2 + 12);
+        this.ctx.fillText('Score: ' + this.score + (this.score >= this.bestScore && this.score > 0 ? ' (New Best!)' : ''), this.c.width / 2, this.H / 2 + 12);
         this.ctx.fillStyle = '#3A607A';
         this.ctx.font = '500 .85rem Inter,sans-serif';
         this.ctx.fillText('Click to play again', this.c.width / 2, this.H / 2 + 48);
