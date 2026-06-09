@@ -385,11 +385,20 @@
     <div>
       <p class="contact-intro">I am an incoming Master's student at Wright State University, and I'm open to <strong>freelance mobile projects</strong>. If you have an opportunity or just want to say hello — my inbox is always open.</p>
       
-      <form class="contact-form" action="https://formspree.io/f/cizerthapa@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
-        <input type="email" name="_replyto" placeholder="Your Email" required aria-label="Your Email" />
-        <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
-        <button type="submit" class="btn btn-primary magnetic" style="align-self: flex-start;">Send Message ↗</button>
+      <div data-fs-success style="display:none; color:var(--primary); margin-bottom: 1rem; font-weight: 600;">Thanks! Your message has been sent.</div>
+      <div data-fs-error style="display:none; color:#ef4444; margin-bottom: 1rem;">Oops! There was a problem submitting your form.</div>
+      
+      <form id="my-form" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" data-fs-field />
+        <span data-fs-error="name" style="color:#ef4444; font-size:0.8rem; display:block; margin-top:-0.5rem; margin-bottom:0.5rem;"></span>
+        
+        <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email" data-fs-field />
+        <span data-fs-error="email" style="color:#ef4444; font-size:0.8rem; display:block; margin-top:-0.5rem; margin-bottom:0.5rem;"></span>
+        
+        <textarea id="message" name="message" placeholder="Your Message" required aria-label="Your Message" data-fs-field></textarea>
+        <span data-fs-error="message" style="color:#ef4444; font-size:0.8rem; display:block; margin-top:-0.5rem; margin-bottom:0.5rem;"></span>
+        
+        <button type="submit" class="btn btn-primary magnetic" style="align-self: flex-start;" data-fs-submit-btn>Send Message ↗</button>
       </form>
     </div>
     <div class="contact-links">
@@ -412,6 +421,11 @@
   <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </footer>
 
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#my-form', formId: 'xgobynbw' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>
