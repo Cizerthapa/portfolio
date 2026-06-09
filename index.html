@@ -1,427 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
-  
+  <meta name="description"
+    content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Cizer Thapa | Flutter Developer" />
-  <meta property="og:description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
-  
+  <meta property="og:description"
+    content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="Cizer Thapa | Flutter Developer" />
-  <meta property="twitter:description" content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
-  
+  <meta property="twitter:description"
+    content="Portfolio of Cizer Thapa, a Junior Flutter & Mobile Application Developer based in Nepal." />
+
   <title>Cizer Thapa | Flutter Developer</title>
-  
+
   <!-- Preconnect and Preload Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    as="style" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-<div id="cursor-glow"></div>
+  <div id="cursor-glow"></div>
 
-<!-- ── NAV ── -->
-<nav>
-  <a class="nav-logo" href="#hero" aria-label="Home">
-    <!-- Flutter "F" logo -->
-    <svg width="22" height="28" viewBox="0 0 66 82" fill="none">
-      <polygon points="0,40 28,0 46,0 18,40" fill="#54C5F8"/>
-      <polygon points="18,40 0,58 18,76 36,76 18,58 36,40" fill="#54C5F8"/>
-      <polygon points="18,58 26,50 36,60 28,68" fill="#0175C2"/>
-    </svg>
-    <span class="nav-logo-text">Cizer</span>
-  </a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#game">Games</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div style="display:flex;align-items:center;gap:0.75rem;">
-    <a href="mailto:cizerthapa@gmail.com" class="nav-contact magnetic">Hire Me</a>
-    <button class="theme-toggle-btn magnetic" id="theme-toggle" aria-label="Toggle theme">
-      <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  <!-- ── NAV ── -->
+  <nav>
+    <a class="nav-logo" href="#hero" aria-label="Home">
+      <!-- Flutter "F" logo -->
+      <svg width="22" height="28" viewBox="0 0 66 82" fill="none">
+        <polygon points="0,40 28,0 46,0 18,40" fill="#54C5F8" />
+        <polygon points="18,40 0,58 18,76 36,76 18,58 36,40" fill="#54C5F8" />
+        <polygon points="18,58 26,50 36,60 28,68" fill="#0175C2" />
       </svg>
-    </button>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-</nav>
-
-<!-- ── HERO ── -->
-<section id="hero">
-  <canvas id="three-canvas"></canvas>
-  <div class="hero-bg-grad"></div>
-  <div class="hero-content">
-    <div class="hero-status"><div class="hero-dot"></div>Incoming MS Student @ Wright State Uni · Flutter dev</div>
-    <h1 class="hero-name">Cizer Thapa</h1>
-    <p class="hero-role">Junior Flutter & Mobile Application Developer</p>
-    <p class="hero-stack">Flutter · Dart · Java · Clean Architecture</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
-      <a href="CizerThapaCV.pdf" target="_blank" class="btn btn-outline magnetic" download>Download CV</a>
-      <button class="btn btn-world magnetic">🌍 Explore My Story</button>
-      <a href="#contact" class="btn btn-outline magnetic">Get In Touch</a>
+      <span class="nav-logo-text">Cizer</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#game">Games</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <a href="mailto:cizerthapa@gmail.com" class="nav-contact magnetic">Hire Me</a>
+      <button class="theme-toggle-btn magnetic" id="theme-toggle" aria-label="Toggle theme">
+        <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
     </div>
-    <!-- Dart code decoration -->
-    <div class="hero-code">
-      <div class="hero-code-header">
-        <div class="hero-code-dot" style="background:#ef4444"></div>
-        <div class="hero-code-dot" style="background:#f59e0b"></div>
-        <div class="hero-code-dot" style="background:#22c55e"></div>
-        <span class="hero-code-fname">main.dart</span>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"
+      aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <canvas id="three-canvas"></canvas>
+    <div class="hero-bg-grad"></div>
+    <div class="hero-content">
+      <div class="hero-status">
+        <div class="hero-dot"></div>Incoming MS Student @ Wright State Uni · Flutter dev
       </div>
-      <span class="cm">// Junior Flutter Developer</span><br>
-      <span class="ck">class</span> <span class="cc">CizerThapa</span> <span class="ck">extends</span> <span class="cc">FlutterDeveloper</span> {<br>
-      &nbsp;&nbsp;<span class="ck">final</span> role = <span class="cs">'Mobile App Dev Junior'</span>;<br>
-      &nbsp;&nbsp;<span class="ck">final</span> stack = [<span class="cs">'Flutter'</span>, <span class="cs">'Dart'</span>, <span class="cs">'Java'</span>];<br>
-      &nbsp;&nbsp;<span class="ck">final</span> degree = <span class="cs">'BSc Computing · 1st Class'</span>;<br><br>
-      &nbsp;&nbsp;<span class="cc">Widget</span> <span class="cf">build</span>(<span class="cc">BuildContext</span> context) {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cf">AmazingApp</span>(appsShipped: <span class="cn">6</span>);<br>
-      &nbsp;&nbsp;}<br>
-      }
-    </div>
-  </div>
-  <div class="scroll-hint">
-    <span>scroll</span>
-    <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><rect x="1" y="1" width="12" height="18" rx="6" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="6" r="2" fill="currentColor"><animate attributeName="cy" values="6;12;6" dur="2s" repeatCount="indefinite"/></circle></svg>
-  </div>
-</section>
-
-<!-- ── WORLD OVERLAY ── -->
-<div id="world-overlay">
-  <canvas id="world-canvas"></canvas>
-  <div class="world-hud">
-    <span class="world-title">◆ Cizer's Flutter Story World</span>
-    <span class="world-hud-text">WASD / Arrow Keys · Walk to glowing platforms</span>
-  </div>
-  <button class="world-exit">✕ Exit</button>
-  <div class="world-nodes-hint" id="world-nodes-hint"></div>
-  <div class="world-card" id="world-card">
-    <div class="wc-icon" id="wc-icon">🎓</div>
-    <div class="wc-title" id="wc-title"></div>
-    <div class="wc-story" id="wc-story"></div>
-    <a href="#" class="wc-link" id="wc-link">View Section →</a>
-  </div>
-  <div class="world-compass">WASD / Arrow Keys · Walk near glowing orbs to discover my story</div>
-</div>
-
-<!-- ── ABOUT ── -->
-<section class="container" id="about">
-  <p class="section-eyebrow">// who I am</p>
-  <h2 class="section-title">About Me</h2>
-  <div class="section-bar"></div>
-  <div class="about-grid reveal">
-    <div><div class="avatar-wrap"><div class="avatar-inner">🧑‍💻</div></div></div>
-    <div class="about-body">
-      <p>I'm a <strong>Junior Flutter & Mobile Application Developer</strong> based in Lalitpur, Nepal, passionate about building cross-platform apps that feel native, fast, and genuinely useful.</p>
-      <p>I hold a <strong>First Class Honours</strong> in BSc Computing (Mobile Application Development) from Islington College / London Metropolitan University (Dec 2025), and I am currently preparing to begin my <strong>Master's degree at Wright State University</strong>. Previously, I worked as a Mobile App Developer Junior at Ambition Guru — contributing to 6+ apps across Android and iOS.</p>
-      <p>Flutter is my home. I care deeply about <strong>clean architecture</strong>, readable Dart code, and user-centric design. I thrive in agile teams where shipping quality software is the goal.</p>
-      <div class="stats-row">
-        <div class="stat"><div class="stat-num">6+</div><div class="stat-lbl">Apps Shipped</div></div>
-        <div class="stat"><div class="stat-num">1st</div><div class="stat-lbl">Class Degree</div></div>
-        <div class="stat"><div class="stat-num">5</div><div class="stat-lbl">Roles Held</div></div>
+      <h1 class="hero-name">Cizer Thapa</h1>
+      <p class="hero-role">Junior Flutter & Mobile Application Developer</p>
+      <p class="hero-stack">Flutter · Dart · Java · Clean Architecture</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
+        <a href="CizerThapaCV.pdf" target="_blank" class="btn btn-outline magnetic" download>Download CV</a>
+        <button class="btn btn-world magnetic">🌍 Explore My Story</button>
+        <a href="#contact" class="btn btn-outline magnetic">Get In Touch</a>
+      </div>
+      <!-- Dart code decoration -->
+      <div class="hero-code">
+        <div class="hero-code-header">
+          <div class="hero-code-dot" style="background:#ef4444"></div>
+          <div class="hero-code-dot" style="background:#f59e0b"></div>
+          <div class="hero-code-dot" style="background:#22c55e"></div>
+          <span class="hero-code-fname">main.dart</span>
+        </div>
+        <span class="cm">// Junior Flutter Developer</span><br>
+        <span class="ck">class</span> <span class="cc">CizerThapa</span> <span class="ck">extends</span> <span
+          class="cc">FlutterDeveloper</span> {<br>
+        &nbsp;&nbsp;<span class="ck">final</span> role = <span class="cs">'Mobile App Dev Junior'</span>;<br>
+        &nbsp;&nbsp;<span class="ck">final</span> stack = [<span class="cs">'Flutter'</span>, <span
+          class="cs">'Dart'</span>, <span class="cs">'Java'</span>];<br>
+        &nbsp;&nbsp;<span class="ck">final</span> degree = <span class="cs">'BSc Computing · 1st Class'</span>;<br><br>
+        &nbsp;&nbsp;<span class="cc">Widget</span> <span class="cf">build</span>(<span class="cc">BuildContext</span>
+        context) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cf">AmazingApp</span>(appsShipped: <span
+          class="cn">6</span>);<br>
+        &nbsp;&nbsp;}<br>
+        }
       </div>
     </div>
-  </div>
-</section>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+        <rect x="1" y="1" width="12" height="18" rx="6" stroke="currentColor" stroke-width="1.5" />
+        <circle cx="7" cy="6" r="2" fill="currentColor">
+          <animate attributeName="cy" values="6;12;6" dur="2s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+    </div>
+  </section>
 
-<!-- ── EXPERIENCE ── -->
-<section class="container" id="experience">
-  <p class="section-eyebrow">// where I've worked</p>
-  <h2 class="section-title">Experience</h2>
-  <div class="section-bar"></div>
-  <div class="timeline">
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-head"><span class="tl-role">Mobile App Developer Junior</span><span class="tl-period">Jan 2026 – Jun 2026</span></div>
-      <div class="tl-company">Ambition Guru · Kathmandu</div>
-      <ul class="tl-list">
-        <li>Developed and maintained 6+ mobile apps for Android & iOS (in-house + external clients)</li>
-        <li>Collaborated with cross-functional teams to define, design, and deliver new features</li>
-        <li>Integrated third-party APIs and services to enhance application functionality</li>
-        <li>Applied user-centric and empathy-driven design principles for better efficiency</li>
-        <li>Followed agile development practices ensuring code quality and maintainability</li>
-      </ul>
+  <!-- ── WORLD OVERLAY ── -->
+  <div id="world-overlay">
+    <canvas id="world-canvas"></canvas>
+    <div class="world-hud">
+      <span class="world-title">◆ Cizer's Flutter Story World</span>
+      <span class="world-hud-text">WASD / Arrow Keys · Walk to glowing platforms</span>
     </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-head"><span class="tl-role">Mobile App Developer Trainee</span><span class="tl-period">Jun 2025 – Jan 2026</span></div>
-      <div class="tl-company">Ambition Guru · Kathmandu</div>
-      <ul class="tl-list">
-        <li>Developed and fixed bugs for Android & iOS (in-house + external clients)</li>
-        <li>Assisted in development of mobile applications using Flutter, KMP and Swift</li>
-        <li>Integrated third-party APIs and services, supported testing and debugging</li>
-        <li>Applied user-centric and empathy-driven design principles</li>
-        <li>Learned and applied modern development practices including clean code</li>
-      </ul>
+    <button class="world-exit">✕ Exit</button>
+    <div class="world-nodes-hint" id="world-nodes-hint"></div>
+    <div class="world-card" id="world-card">
+      <div class="wc-icon" id="wc-icon">🎓</div>
+      <div class="wc-title" id="wc-title"></div>
+      <div class="wc-story" id="wc-story"></div>
+      <a href="#" class="wc-link" id="wc-link">View Section →</a>
     </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-head"><span class="tl-role">Mobile Application Developer Intern</span><span class="tl-period">Apr 2025 – Jun 2025</span></div>
-      <div class="tl-company">Ambition Guru · Kathmandu</div>
-      <ul class="tl-list">
-        <li>Gained hands-on experience with Flutter, Kotlin Multiplatform (KMP), and SwiftUI</li>
-        <li>Contributed to the Digital Nepal initiative and internal projects</li>
-        <li>Prepared product data reports, code repositories, and technical documentation</li>
-        <li>Wrote clean, testable code — performed logical testing before QA handover</li>
-      </ul>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-head"><span class="tl-role">Software Engineer Intern</span><span class="tl-period">Aug 2024 – Dec 2024</span></div>
-      <div class="tl-company">Innovate Tech · Kathmandu</div>
-      <ul class="tl-list">
-        <li>Designed and built backend components for HRM microservices (Asset Management, Wiki Services)</li>
-        <li>Worked with Node.js, MongoDB, and PostgreSQL</li>
-        <li>Delivered technical documentation that improved continuity and team collaboration</li>
-      </ul>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-head"><span class="tl-role">Graphic Designer Intern</span><span class="tl-period">Mar 2024 – Aug 2024</span></div>
-      <div class="tl-company">Innovate Tech · Kathmandu</div>
-      <ul class="tl-list">
-        <li>Designed e-book layouts and digital learning materials</li>
-        <li>Improved visual appeal and student engagement through design</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ── PROJECTS ── -->
-<section class="container" id="projects">
-  <p class="section-eyebrow">// what I've built</p>
-  <h2 class="section-title">Projects</h2>
-  <div class="section-bar"></div>
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="p-icon">🎯</div><div class="p-badge">Final Year Project</div>
-      <h3 class="p-title">yourNext</h3>
-      <p class="p-desc">A cross-platform Flutter app guiding users toward personalized educational and career pathways. Clean architecture, BLoC state management, personalized content delivery.</p>
-      <div class="p-tags"><span class="p-tag">Flutter</span><span class="p-tag">Dart</span><span class="p-tag">BLoC</span><span class="p-tag">Clean Arch</span></div>
-      <span style="color:var(--text3);font-size:.8rem;">6 months · Solo</span>
-    </div>
-    <div class="project-card reveal">
-      <div class="p-icon">📱</div><div class="p-badge">Academic</div>
-      <h3 class="p-title">Portfolio App</h3>
-      <p class="p-desc">Native Android app built with Java and XML to showcase projects, skills, and experience in a polished mobile-first format.</p>
-      <div class="p-tags"><span class="p-tag">Java</span><span class="p-tag">Android</span><span class="p-tag">XML</span></div>
-      <a href="https://github.com/Cizerthapa/PortfolioApp" class="p-link" target="_blank" rel="noopener">View on GitHub →</a>
-    </div>
-    <div class="project-card reveal">
-      <div class="p-icon">🔍</div><div class="p-badge">DSA Practice</div>
-      <h3 class="p-title">Automobile Search & Sort</h3>
-      <p class="p-desc">Desktop app with custom DSA implementations — Binary/Linear search and Merge/Selection sort — with a GUI built in NetBeans.</p>
-      <div class="p-tags"><span class="p-tag">Java</span><span class="p-tag">DSA</span><span class="p-tag">NetBeans</span><span class="p-tag">GUI</span></div>
-      <a href="https://github.com/Cizerthapa/DSASortAndSearch" class="p-link" target="_blank" rel="noopener">View on GitHub →</a>
-    </div>
-    <div class="project-card reveal">
-      <div class="p-icon">🚪</div><div class="p-badge">IoT · Team Project</div>
-      <h3 class="p-title">Arduino Auto Door</h3>
-      <p class="p-desc">Automated door system using Arduino that detects people or vehicles via sensors and opens automatically — bridging hardware and software.</p>
-      <div class="p-tags"><span class="p-tag">Arduino</span><span class="p-tag">C#</span><span class="p-tag">IoT</span><span class="p-tag">Sensors</span></div>
-      <span style="color:var(--text3);font-size:.8rem;">1 month · Team of 5</span>
-    </div>
-  </div>
-</section>
-
-<!-- ── SKILLS ── -->
-<section class="container" id="skills">
-  <p class="section-eyebrow">// my toolkit</p>
-  <h2 class="section-title">Skills</h2>
-  <div class="section-bar"></div>
-  <div class="skills-grid reveal">
-    <div class="skill-cat"><div class="skill-cat-title">Flutter & Dart</div><div class="skill-tags"><span class="s-tag">Flutter</span><span class="s-tag">Dart</span><span class="s-tag">BLoC</span><span class="s-tag">Provider</span><span class="s-tag">Clean Arch</span></div></div>
-    <div class="skill-cat"><div class="skill-cat-title">Mobile</div><div class="skill-tags"><span class="s-tag">Java</span><span class="s-tag">Kotlin</span><span class="s-tag">SwiftUI</span><span class="s-tag">KMP</span><span class="s-tag">Android</span></div></div>
-    <div class="skill-cat"><div class="skill-cat-title">Backend & APIs</div><div class="skill-tags"><span class="s-tag">Node.js</span><span class="s-tag">REST API</span><span class="s-tag">MongoDB</span><span class="s-tag">PostgreSQL</span></div></div>
-    <div class="skill-cat"><div class="skill-cat-title">Tools & Practices</div><div class="skill-tags"><span class="s-tag">Git</span><span class="s-tag">GitHub</span><span class="s-tag">Agile</span><span class="s-tag">UI/UX</span><span class="s-tag">AWS</span></div></div>
-  </div>
-</section>
-
-<!-- ── CERTIFICATIONS ── -->
-<section class="container" id="certifications">
-  <p class="section-eyebrow">// credentials</p>
-  <h2 class="section-title">Certifications</h2>
-  <div class="section-bar"></div>
-  <div class="cert-grid">
-    <div class="cert-item reveal"><div class="cert-ico">☁️</div><div><div class="cert-name">AWS Academy Cloud Security Foundations</div><div class="cert-meta">Amazon Web Services · 2024</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">☁️</div><div><div class="cert-name">AWS Academy Machine Learning Foundations</div><div class="cert-meta">Amazon Web Services · 2024</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">☁️</div><div><div class="cert-name">AWS Academy Data Center Technician</div><div class="cert-meta">Amazon Web Services · 2024</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">📱</div><div><div class="cert-name">Dart Clean Code: High-Efficiency Dart Programs</div><div class="cert-meta">LinkedIn Learning · Sep 2025</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">⚡</div><div><div class="cert-name">Agile Software Development</div><div class="cert-meta">LinkedIn Learning · Apr 2025</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">📘</div><div><div class="cert-name">Learning TypeScript</div><div class="cert-meta">LinkedIn Learning · Aug 2024</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">🟢</div><div><div class="cert-name">Learning Node.js</div><div class="cert-meta">LinkedIn Learning · May 2024</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">☕</div><div><div class="cert-name">Java Practice: Collections</div><div class="cert-meta">LinkedIn Learning · Oct 2023</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">☕</div><div><div class="cert-name">Learning Java 11</div><div class="cert-meta">LinkedIn Learning · Sep 2023</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">🐍</div><div><div class="cert-name">Learning Python</div><div class="cert-meta">LinkedIn Learning · Aug 2023</div></div></div>
-    <div class="cert-item reveal"><div class="cert-ico">🈶</div><div><div class="cert-name">Essential Mandarin</div><div class="cert-meta">LinkedIn Learning · Aug 2023</div></div></div>
-  </div>
-</section>
-
-<!-- ── EXTRAS ── -->
-<section class="container" id="extras">
-  <p class="section-eyebrow">// beyond code</p>
-  <h2 class="section-title">Activities & Community</h2>
-  <div class="section-bar"></div>
-  <div class="extras-grid reveal">
-    <div class="extra-card">
-      <h3>Co-Curricular</h3>
-      <ul class="extra-list">
-        <li>Rota Run Mini Marathon <span>Jan 2026</span></li>
-        <li>International Exposure — Thailand <span>Oct 2025</span></li>
-        <li>Finance Seminar by Sanjog Koirala <span>2025</span></li>
-        <li>Hackathon Awareness Program <span>2025</span></li>
-        <li>Videography Winner <span>2022</span></li>
-        <li>USG of Technology, Gems College <span>2021</span></li>
-      </ul>
-    </div>
-    <div class="extra-card">
-      <h3>Community Service</h3>
-      <ul class="extra-list">
-        <li>Local Plogging Initiative — Bhaisepati <span>2025</span></li>
-        <li>Gems Social Club <span>2022</span></li>
-      </ul>
-      <h3 style="margin-top:1.5rem;">Education</h3>
-      <ul class="extra-list">
-        <li>Master's Degree <span>Incoming</span></li>
-        <li style="color:var(--text3);font-size:.8rem; border-bottom:1px solid var(--border); padding-bottom:.3rem; margin-bottom:.3rem;">Wright State University</li>
-        <li>BSc Computing (Mobile App Dev) — <strong style="color:var(--text)">First Class Honours</strong> <span>Dec 2025</span></li>
-        <li style="color:var(--text3);font-size:.8rem;">Islington College · London Metropolitan University</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ── GAMES ── -->
-<section class="container" id="game">
-  <p class="section-eyebrow">// mini games</p>
-  <h2 class="section-title">Play a Game</h2>
-  <div class="section-bar"></div>
-  <p style="color:var(--text2);margin-bottom:1.75rem;">Four Flutter-themed games. Consider it an interactive portfolio.</p>
-  <div class="game-tabs">
-    <button class="game-tab active" data-game="gem-rush">◆ Widget Rush</button>
-    <button class="game-tab" data-game="flutter-dash">🐦 Dart Dash</button>
-    <button class="game-tab" data-game="bug-squash">🐛 Bug Squash</button>
-    <button class="game-tab" data-game="code-breaker">💥 Code Breaker</button>
+    <div class="world-compass">WASD / Arrow Keys · Walk near glowing orbs to discover my story</div>
   </div>
 
-  <!-- PANEL 1: Widget Rush (Three.js Gem Rush) -->
-  <div class="game-panel active" id="panel-gem-rush">
-    <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;">Collect <strong style="color:var(--primary)">blue widgets</strong> (+10pts) · dodge <strong style="color:#ef4444">null pointer bugs</strong> (−5pts) · <strong style="color:var(--text)">45 seconds!</strong></p>
-    <div class="game-wrap reveal">
-      <div class="game-hud">
-        <div class="hud-score">Score &nbsp;<span id="g-score">0</span></div>
-        <div class="hud-timer">⏱ &nbsp;<span id="g-timer">45</span>s</div>
-      </div>
-      <canvas id="game-canvas"></canvas>
-      <div class="game-overlay" id="game-overlay">
-        <div class="game-overlay-box">
-          <div class="g-ov-icon" id="g-icon">◆</div>
-          <h3 id="g-title">Widget Rush</h3>
-          <p id="g-subtitle">Collect widgets, dodge null-pointer bugs!</p>
-          <p class="g-controls">WASD / Arrow Keys to move</p>
-          <button class="btn btn-primary">flutter run</button>
+  <!-- ── ABOUT ── -->
+  <section class="container" id="about">
+    <p class="section-eyebrow">// who I am</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="section-bar"></div>
+    <div class="about-grid reveal">
+      <div>
+        <div class="avatar-wrap">
+          <div class="avatar-inner">🧑‍💻</div>
         </div>
       </div>
-      <div class="dpad">
-        <button class="dpad-btn dpad-up" data-key="ArrowUp">▲</button>
-        <button class="dpad-btn dpad-left" data-key="ArrowLeft">◀</button>
-        <button class="dpad-btn dpad-right" data-key="ArrowRight">▶</button>
-        <button class="dpad-btn dpad-down" data-key="ArrowDown">▼</button>
+      <div class="about-body">
+        <p>I'm a <strong>Junior Flutter & Mobile Application Developer</strong> based in Lalitpur, Nepal, passionate
+          about building cross-platform apps that feel native, fast, and genuinely useful.</p>
+        <p>I hold a <strong>First Class Honours</strong> in BSc Computing (Mobile Application Development) from
+          Islington College / London Metropolitan University (Dec 2025), and I am currently preparing to begin my
+          <strong>Master's degree at Wright State University</strong>. Previously, I worked as a Mobile App Developer
+          Junior at Ambition Guru — contributing to 6+ apps across Android and iOS.
+        </p>
+        <p>Flutter is my home. I care deeply about <strong>clean architecture</strong>, readable Dart code, and
+          user-centric design. I thrive in agile teams where shipping quality software is the goal.</p>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-num">6+</div>
+            <div class="stat-lbl">Apps Shipped</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">1st</div>
+            <div class="stat-lbl">Class Degree</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">5</div>
+            <div class="stat-lbl">Roles Held</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- PANEL 2: Dart Dash (endless runner) -->
-  <div class="game-panel" id="panel-flutter-dash">
-    <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;"><strong style="color:var(--text)">Space / Click / Tap</strong> to jump · Double-jump allowed · Dodge the null exceptions!</p>
-    <div class="canvas2d-wrap reveal"><canvas id="dash-canvas" height="340"></canvas></div>
-  </div>
+  <!-- ── EXPERIENCE ── -->
+  <section class="container" id="experience">
+    <p class="section-eyebrow">// where I've worked</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-bar"></div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><span class="tl-role">Mobile App Developer Junior</span><span class="tl-period">Jan 2026 –
+            Jun 2026</span></div>
+        <div class="tl-company">Ambition Guru · Kathmandu</div>
+        <ul class="tl-list">
+          <li>Developed and maintained 6+ mobile apps for Android & iOS (in-house + external clients)</li>
+          <li>Collaborated with cross-functional teams to define, design, and deliver new features</li>
+          <li>Integrated third-party APIs and services to enhance application functionality</li>
+          <li>Applied user-centric and empathy-driven design principles for better efficiency</li>
+          <li>Followed agile development practices ensuring code quality and maintainability</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><span class="tl-role">Mobile App Developer Trainee</span><span class="tl-period">Jun 2025 –
+            Jan 2026</span></div>
+        <div class="tl-company">Ambition Guru · Kathmandu</div>
+        <ul class="tl-list">
+          <li>Developed and fixed bugs for Android & iOS (in-house + external clients)</li>
+          <li>Assisted in development of mobile applications using Flutter, KMP and Swift</li>
+          <li>Integrated third-party APIs and services, supported testing and debugging</li>
+          <li>Applied user-centric and empathy-driven design principles</li>
+          <li>Learned and applied modern development practices including clean code</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><span class="tl-role">Mobile Application Developer Intern</span><span class="tl-period">Apr
+            2025 – Jun 2025</span></div>
+        <div class="tl-company">Ambition Guru · Kathmandu</div>
+        <ul class="tl-list">
+          <li>Gained hands-on experience with Flutter, Kotlin Multiplatform (KMP), and SwiftUI</li>
+          <li>Contributed to the Digital Nepal initiative and internal projects</li>
+          <li>Prepared product data reports, code repositories, and technical documentation</li>
+          <li>Wrote clean, testable code — performed logical testing before QA handover</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><span class="tl-role">Software Engineer Intern</span><span class="tl-period">Aug 2024 – Dec
+            2024</span></div>
+        <div class="tl-company">Innovate Tech · Kathmandu</div>
+        <ul class="tl-list">
+          <li>Designed and built backend components for HRM microservices (Asset Management, Wiki Services)</li>
+          <li>Worked with Node.js, MongoDB, and PostgreSQL</li>
+          <li>Delivered technical documentation that improved continuity and team collaboration</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head"><span class="tl-role">Graphic Designer Intern</span><span class="tl-period">Mar 2024 – Aug
+            2024</span></div>
+        <div class="tl-company">Innovate Tech · Kathmandu</div>
+        <ul class="tl-list">
+          <li>Designed e-book layouts and digital learning materials</li>
+          <li>Improved visual appeal and student engagement through design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <!-- PANEL 3: Bug Squash -->
-  <div class="game-panel" id="panel-bug-squash">
-    <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;"><strong style="color:var(--text)">Click / Tap</strong> to squash Flutter bugs · Combos multiply score · 30 seconds!</p>
-    <div class="canvas2d-wrap reveal"><canvas id="squash-canvas" height="360"></canvas></div>
-  </div>
+  <!-- ── PROJECTS ── -->
+  <section class="container" id="projects">
+    <p class="section-eyebrow">// what I've built</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-bar"></div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="p-icon">🎯</div>
+        <div class="p-badge">Final Year Project</div>
+        <h3 class="p-title">yourNext</h3>
+        <p class="p-desc">A cross-platform Flutter app guiding users toward personalized educational and career
+          pathways. Clean architecture, BLoC state management, personalized content delivery.</p>
+        <div class="p-tags"><span class="p-tag">Flutter</span><span class="p-tag">Dart</span><span
+            class="p-tag">BLoC</span><span class="p-tag">Clean Arch</span></div>
+        <span style="color:var(--text3);font-size:.8rem;">6 months · Solo</span>
+      </div>
+      <div class="project-card reveal">
+        <div class="p-icon">📱</div>
+        <div class="p-badge">Academic</div>
+        <h3 class="p-title">Portfolio App</h3>
+        <p class="p-desc">Native Android app built with Java and XML to showcase projects, skills, and experience in a
+          polished mobile-first format.</p>
+        <div class="p-tags"><span class="p-tag">Java</span><span class="p-tag">Android</span><span
+            class="p-tag">XML</span></div>
+        <a href="https://github.com/Cizerthapa/PortfolioApp" class="p-link" target="_blank" rel="noopener">View on
+          GitHub →</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="p-icon">🔍</div>
+        <div class="p-badge">DSA Practice</div>
+        <h3 class="p-title">Automobile Search & Sort</h3>
+        <p class="p-desc">Desktop app with custom DSA implementations — Binary/Linear search and Merge/Selection sort —
+          with a GUI built in NetBeans.</p>
+        <div class="p-tags"><span class="p-tag">Java</span><span class="p-tag">DSA</span><span
+            class="p-tag">NetBeans</span><span class="p-tag">GUI</span></div>
+        <a href="https://github.com/Cizerthapa/DSASortAndSearch" class="p-link" target="_blank" rel="noopener">View on
+          GitHub →</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="p-icon">🚪</div>
+        <div class="p-badge">IoT · Team Project</div>
+        <h3 class="p-title">Arduino Auto Door</h3>
+        <p class="p-desc">Automated door system using Arduino that detects people or vehicles via sensors and opens
+          automatically — bridging hardware and software.</p>
+        <div class="p-tags"><span class="p-tag">Arduino</span><span class="p-tag">C#</span><span
+            class="p-tag">IoT</span><span class="p-tag">Sensors</span></div>
+        <span style="color:var(--text3);font-size:.8rem;">1 month · Team of 5</span>
+      </div>
+    </div>
+  </section>
 
-  <!-- PANEL 4: Code Breaker -->
-  <div class="game-panel" id="panel-code-breaker">
-    <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;"><strong style="color:var(--text)">Move mouse / touch</strong> for paddle · Break every Flutter & Dart concept brick · 3 lives!</p>
-    <div class="canvas2d-wrap reveal"><canvas id="breaker-canvas" height="420"></canvas></div>
-  </div>
-</section>
+  <!-- ── SKILLS ── -->
+  <section class="container" id="skills">
+    <p class="section-eyebrow">// my toolkit</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="section-bar"></div>
+    <div class="skills-grid reveal">
+      <div class="skill-cat">
+        <div class="skill-cat-title">Flutter & Dart</div>
+        <div class="skill-tags"><span class="s-tag">Flutter</span><span class="s-tag">Dart</span><span
+            class="s-tag">BLoC</span><span class="s-tag">Provider</span><span class="s-tag">Clean Arch</span></div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Mobile</div>
+        <div class="skill-tags"><span class="s-tag">Java</span><span class="s-tag">Kotlin</span><span
+            class="s-tag">SwiftUI</span><span class="s-tag">KMP</span><span class="s-tag">Android</span></div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Backend & APIs</div>
+        <div class="skill-tags"><span class="s-tag">Node.js</span><span class="s-tag">REST API</span><span
+            class="s-tag">MongoDB</span><span class="s-tag">PostgreSQL</span></div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-title">Tools & Practices</div>
+        <div class="skill-tags"><span class="s-tag">Git</span><span class="s-tag">GitHub</span><span
+            class="s-tag">Agile</span><span class="s-tag">UI/UX</span><span class="s-tag">AWS</span></div>
+      </div>
+    </div>
+  </section>
 
-<!-- ── CONTACT ── -->
-<section class="container" id="contact">
-  <p class="section-eyebrow">// let's connect</p>
-  <h2 class="section-title">Get In Touch</h2>
-  <div class="section-bar"></div>
-  <div class="contact-wrap reveal">
-    <div>
-      <p class="contact-intro">I am an incoming Master's student at Wright State University, and I'm open to <strong>freelance mobile projects</strong>. If you have an opportunity or just want to say hello — my inbox is always open.</p>
-      
-      <div id="success-toast" class="toast-popup" style="display:none;">
-        <div class="toast-icon">✓</div>
+  <!-- ── CERTIFICATIONS ── -->
+  <section class="container" id="certifications">
+    <p class="section-eyebrow">// credentials</p>
+    <h2 class="section-title">Certifications</h2>
+    <div class="section-bar"></div>
+    <div class="cert-grid">
+      <div class="cert-item reveal">
+        <div class="cert-ico">☁️</div>
         <div>
-          <div style="font-weight:800; color:var(--text); font-size: 1.25rem;">Message Sent!</div>
-          <div style="font-size:1rem; color:var(--text2); margin-top:0.3rem;">Thanks for reaching out. I'll get back to you soon.</div>
+          <div class="cert-name">AWS Academy Cloud Security Foundations</div>
+          <div class="cert-meta">Amazon Web Services · 2024</div>
         </div>
       </div>
-      
-      <form id="my-form" class="contact-form" action="https://formspree.io/f/xgobynbw" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
-        
-        <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
-        <textarea id="message" name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
-        
-        <button type="submit" class="btn btn-primary magnetic" style="align-self: flex-start;">Send Message ↗</button>
-      </form>
+      <div class="cert-item reveal">
+        <div class="cert-ico">☁️</div>
+        <div>
+          <div class="cert-name">AWS Academy Machine Learning Foundations</div>
+          <div class="cert-meta">Amazon Web Services · 2024</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">☁️</div>
+        <div>
+          <div class="cert-name">AWS Academy Data Center Technician</div>
+          <div class="cert-meta">Amazon Web Services · 2024</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">📱</div>
+        <div>
+          <div class="cert-name">Dart Clean Code: High-Efficiency Dart Programs</div>
+          <div class="cert-meta">LinkedIn Learning · Sep 2025</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">⚡</div>
+        <div>
+          <div class="cert-name">Agile Software Development</div>
+          <div class="cert-meta">LinkedIn Learning · Apr 2025</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">📘</div>
+        <div>
+          <div class="cert-name">Learning TypeScript</div>
+          <div class="cert-meta">LinkedIn Learning · Aug 2024</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">🟢</div>
+        <div>
+          <div class="cert-name">Learning Node.js</div>
+          <div class="cert-meta">LinkedIn Learning · May 2024</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">☕</div>
+        <div>
+          <div class="cert-name">Java Practice: Collections</div>
+          <div class="cert-meta">LinkedIn Learning · Oct 2023</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">☕</div>
+        <div>
+          <div class="cert-name">Learning Java 11</div>
+          <div class="cert-meta">LinkedIn Learning · Sep 2023</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">🐍</div>
+        <div>
+          <div class="cert-name">Learning Python</div>
+          <div class="cert-meta">LinkedIn Learning · Aug 2023</div>
+        </div>
+      </div>
+      <div class="cert-item reveal">
+        <div class="cert-ico">🈶</div>
+        <div>
+          <div class="cert-name">Essential Mandarin</div>
+          <div class="cert-meta">LinkedIn Learning · Aug 2023</div>
+        </div>
+      </div>
     </div>
-    <div class="contact-links">
-      <a href="mailto:cizerthapa@gmail.com" class="contact-link"><div class="cl-icon">📧</div><div><div class="cl-label">Email</div><div class="cl-val">cizerthapa@gmail.com</div></div></a>
-      <a href="tel:+9779803561155" class="contact-link"><div class="cl-icon">📱</div><div><div class="cl-label">Phone</div><div class="cl-val">+977 9803561155</div></div></a>
-      <a href="https://github.com/Cizerthapa" target="_blank" rel="noopener" class="contact-link"><div class="cl-icon">💻</div><div><div class="cl-label">GitHub</div><div class="cl-val">github.com/Cizerthapa</div></div></a>
-      <div class="contact-link" style="cursor:default;"><div class="cl-icon">📍</div><div><div class="cl-label">Location</div><div class="cl-val">Bhaisepati, Lalitpur, Nepal</div></div></div>
+  </section>
+
+  <!-- ── EXTRAS ── -->
+  <section class="container" id="extras">
+    <p class="section-eyebrow">// beyond code</p>
+    <h2 class="section-title">Activities & Community</h2>
+    <div class="section-bar"></div>
+    <div class="extras-grid reveal">
+      <div class="extra-card">
+        <h3>Co-Curricular</h3>
+        <ul class="extra-list">
+          <li>Rota Run Mini Marathon <span>Jan 2026</span></li>
+          <li>AAAA International Exposure by ING — Thailand <span>Oct 2025</span></li>
+          <li>Finance Seminar by Sanjog Koirala <span>2025</span></li>
+          <li>Hackathon Awareness Program <span>2025</span></li>
+          <li>Videography Winner <span>2022</span></li>
+          <li>USG of Technology, Gems College <span>2021</span></li>
+        </ul>
+      </div>
+      <div class="extra-card">
+        <h3>Community Service</h3>
+        <ul class="extra-list">
+          <li>Local Plogging Initiative — Bhaisepati <span>2025</span></li>
+          <li>Gems Social Club <span>2022</span></li>
+        </ul>
+        <h3 style="margin-top:1.5rem;">Education</h3>
+        <ul class="extra-list">
+          <li>Master's Degree <span>Incoming</span></li>
+          <li
+            style="color:var(--text3);font-size:.8rem; border-bottom:1px solid var(--border); padding-bottom:.3rem; margin-bottom:.3rem;">
+            Wright State University</li>
+          <li>BSc Computing (Mobile App Dev) — <strong style="color:var(--text)">First Class Honours</strong> <span>Dec
+              2025</span></li>
+          <li
+            style="color:var(--text3);font-size:.8rem; border-bottom:1px solid var(--border); padding-bottom:.3rem; margin-bottom:.3rem;">
+            Islington College · London Metropolitan University</li>
+
+          <li>A Levels — Cambridge University <span>2020</span></li>
+          <li
+            style="color:var(--text3);font-size:.8rem; border-bottom:1px solid var(--border); padding-bottom:.3rem; margin-bottom:.3rem;">
+            Gems Institute of Higher Education</li>
+
+          <li>SEE - Nepal Examination Board</li>
+          <li
+            style="color:var(--text3);font-size:.8rem; border-bottom:1px solid var(--border); padding-bottom:.3rem; margin-bottom:.3rem;">
+            Shuvatara School, Sanepa & Lamatar, Lalitpur</li>
+
+          <li>First Grade</li>
+          <li style="color:var(--text3);font-size:.8rem;">
+            Premier International School, Khumaltar, Lalitpur</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>
-    Built with
-    <svg width="14" height="17" viewBox="0 0 66 82" fill="none" style="vertical-align:middle;margin:0 2px">
-      <polygon points="0,40 28,0 46,0 18,40" fill="#54C5F8"/><polygon points="18,40 0,58 18,76 36,76 18,58 36,40" fill="#54C5F8"/><polygon points="18,58 26,50 36,60 28,68" fill="#0175C2"/>
-    </svg>
-    Flutter love by <a href="#hero">Cizer Thapa</a> &nbsp;·&nbsp; <span id="current-year">2025</span> &nbsp;·&nbsp; Lalitpur, Nepal
-  </p>
-  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
-</footer>
+  <!-- ── GAMES ── -->
+  <section class="container" id="game">
+    <p class="section-eyebrow">// mini games</p>
+    <h2 class="section-title">Play a Game</h2>
+    <div class="section-bar"></div>
+    <p style="color:var(--text2);margin-bottom:1.75rem;">Four Flutter-themed games. Consider it an interactive
+      portfolio.</p>
+    <div class="game-tabs">
+      <button class="game-tab active" data-game="gem-rush">◆ Widget Rush</button>
+      <button class="game-tab" data-game="flutter-dash">🐦 Dart Dash</button>
+      <button class="game-tab" data-game="bug-squash">🐛 Bug Squash</button>
+      <button class="game-tab" data-game="code-breaker">💥 Code Breaker</button>
+    </div>
 
-<script type="module" src="js/main.js"></script>
+    <!-- PANEL 1: Widget Rush (Three.js Gem Rush) -->
+    <div class="game-panel active" id="panel-gem-rush">
+      <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;">Collect <strong
+          style="color:var(--primary)">blue widgets</strong> (+10pts) · dodge <strong style="color:#ef4444">null pointer
+          bugs</strong> (−5pts) · <strong style="color:var(--text)">45 seconds!</strong></p>
+      <div class="game-wrap reveal">
+        <div class="game-hud">
+          <div class="hud-score">Score &nbsp;<span id="g-score">0</span></div>
+          <div class="hud-timer">⏱ &nbsp;<span id="g-timer">45</span>s</div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div class="game-overlay" id="game-overlay">
+          <div class="game-overlay-box">
+            <div class="g-ov-icon" id="g-icon">◆</div>
+            <h3 id="g-title">Widget Rush</h3>
+            <p id="g-subtitle">Collect widgets, dodge null-pointer bugs!</p>
+            <p class="g-controls">WASD / Arrow Keys to move</p>
+            <button class="btn btn-primary">flutter run</button>
+          </div>
+        </div>
+        <div class="dpad">
+          <button class="dpad-btn dpad-up" data-key="ArrowUp">▲</button>
+          <button class="dpad-btn dpad-left" data-key="ArrowLeft">◀</button>
+          <button class="dpad-btn dpad-right" data-key="ArrowRight">▶</button>
+          <button class="dpad-btn dpad-down" data-key="ArrowDown">▼</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: Dart Dash (endless runner) -->
+    <div class="game-panel" id="panel-flutter-dash">
+      <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;"><strong style="color:var(--text)">Space /
+          Click / Tap</strong> to jump · Double-jump allowed · Dodge the null exceptions!</p>
+      <div class="canvas2d-wrap reveal"><canvas id="dash-canvas" height="340"></canvas></div>
+    </div>
+
+    <!-- PANEL 3: Bug Squash -->
+    <div class="game-panel" id="panel-bug-squash">
+      <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;"><strong style="color:var(--text)">Click /
+          Tap</strong> to squash Flutter bugs · Combos multiply score · 30 seconds!</p>
+      <div class="canvas2d-wrap reveal"><canvas id="squash-canvas" height="360"></canvas></div>
+    </div>
+
+    <!-- PANEL 4: Code Breaker -->
+    <div class="game-panel" id="panel-code-breaker">
+      <p style="color:var(--text2);margin-bottom:1rem;font-size:.875rem;"><strong style="color:var(--text)">Move mouse /
+          touch</strong> for paddle · Break every Flutter & Dart concept brick · 3 lives!</p>
+      <div class="canvas2d-wrap reveal"><canvas id="breaker-canvas" height="420"></canvas></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="container" id="contact">
+    <p class="section-eyebrow">// let's connect</p>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="section-bar"></div>
+    <div class="contact-wrap reveal">
+      <div>
+        <p class="contact-intro">I am an incoming Master's student at Wright State University, and I'm open to
+          <strong>freelance mobile projects</strong>. If you have an opportunity or just want to say hello — my inbox is
+          always open.
+        </p>
+
+        <div id="success-toast" class="toast-popup" style="display:none;">
+          <div class="toast-icon">✓</div>
+          <div>
+            <div style="font-weight:800; color:var(--text); font-size: 1.25rem;">Message Sent!</div>
+            <div style="font-size:1rem; color:var(--text2); margin-top:0.3rem;">Thanks for reaching out. I'll get back
+              to you soon.</div>
+          </div>
+        </div>
+
+        <form id="my-form" class="contact-form" action="https://formspree.io/f/xgobynbw" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+
+          <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
+          <textarea id="message" name="message" placeholder="Your Message" required
+            aria-label="Your Message"></textarea>
+
+          <button type="submit" class="btn btn-primary magnetic" style="align-self: flex-start;">Send Message ↗</button>
+        </form>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:cizerthapa@gmail.com" class="contact-link">
+          <div class="cl-icon">📧</div>
+          <div>
+            <div class="cl-label">Email</div>
+            <div class="cl-val">cizerthapa@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+9779803561155" class="contact-link">
+          <div class="cl-icon">📱</div>
+          <div>
+            <div class="cl-label">Phone</div>
+            <div class="cl-val">+977 9803561155</div>
+          </div>
+        </a>
+        <a href="https://github.com/Cizerthapa" target="_blank" rel="noopener" class="contact-link">
+          <div class="cl-icon">💻</div>
+          <div>
+            <div class="cl-label">GitHub</div>
+            <div class="cl-val">github.com/Cizerthapa</div>
+          </div>
+        </a>
+        <div class="contact-link" style="cursor:default;">
+          <div class="cl-icon">📍</div>
+          <div>
+            <div class="cl-label">Location</div>
+            <div class="cl-val">Bhaisepati, Lalitpur, Nepal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Built with
+      <svg width="14" height="17" viewBox="0 0 66 82" fill="none" style="vertical-align:middle;margin:0 2px">
+        <polygon points="0,40 28,0 46,0 18,40" fill="#54C5F8" />
+        <polygon points="18,40 0,58 18,76 36,76 18,58 36,40" fill="#54C5F8" />
+        <polygon points="18,58 26,50 36,60 28,68" fill="#0175C2" />
+      </svg>
+      Flutter love by <a href="#hero">Cizer Thapa</a> &nbsp;·&nbsp; <span id="current-year">2025</span> &nbsp;·&nbsp;
+      Lalitpur, Nepal
+    </p>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
