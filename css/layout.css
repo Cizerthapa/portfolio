@@ -4,7 +4,7 @@
 nav { position:fixed; top:0; width:100%; z-index:200; padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:64px; background:rgba(2,12,26,.82); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); transition: background-color 0.3s ease, border-color 0.3s ease; }
 [data-theme='light'] nav { background: rgba(244, 247, 251, 0.82); }
 .nav-logo { display:flex; align-items:center; gap:.55rem; text-decoration:none; }
-.nav-logo-text { font-size:1.05rem; font-weight:800; background:linear-gradient(135deg,var(--primary),var(--primary2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.nav-logo-text { font-size:1.05rem; font-weight:800; background:linear-gradient(135deg,var(--primary),var(--primary2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 .nav-links { display:flex; list-style:none; gap:.2rem; align-items:center; }
 .nav-links a { color:var(--text2); text-decoration:none; font-size:.85rem; font-weight:500; padding:.35rem .75rem; border-radius:6px; transition:color .2s,background .2s; }
 .nav-links a:hover { color:var(--text); background:var(--border); }
