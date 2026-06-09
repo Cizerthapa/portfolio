@@ -2,10 +2,10 @@ export default class WorldExplorer {
   constructor() {
     this.WORLD_NODES = [
       {id:'edu',pos:[-7,0,-5],color:0x54C5F8,hex:'#54C5F8',icon:'🎓',title:'Education',
-       story:'First Class Honours — BSc Computing (Mobile App Dev)\nIslington College / London Metropolitan University, Dec 2025.\n\nEvery Flutter app I build rests on the foundation I built here: clean code, architecture patterns, and a deep love for mobile.',
+       story:'Incoming Master\'s Student at Wright State University.\nFirst Class Honours — BSc Computing (Mobile App Dev) from Islington College, Dec 2025.\n\nEvery Flutter app I build rests on the foundation I built here: clean code, architecture patterns, and a deep love for mobile.',
        link:'#about',linkText:'About Me'},
       {id:'work',pos:[7,0,-5],color:0x0175C2,hex:'#0175C2',icon:'💼',title:'Ambition Guru',
-       story:'Mobile App Developer Trainee · Jun 2025 → Present\n9+ apps shipped on Android & iOS.\n\nFrom Flutter intern (Apr 2025) to trainee in 2 months. Real deadlines, cross-functional teams, real users. Flutter, KMP, SwiftUI — I grew fast.',
+       story:'Mobile App Developer Trainee · Jun 2025 → Jun 2026\n9+ apps shipped on Android & iOS.\n\nFrom Flutter intern (Apr 2025) to trainee in 2 months. Real deadlines, cross-functional teams, real users. Left to pursue my Master\'s degree.',
        link:'#experience',linkText:'View Experience'},
       {id:'proj',pos:[0,0,-10],color:0x00B4D8,hex:'#00B4D8',icon:'🚀',title:'yourNext',
        story:'My proudest Flutter build — a cross-platform career guidance app.\nClean Architecture · BLoC · Auth · Personalized pathways.\n\nSix months of solo Flutter work. Also: DSA sorter (Java), Portfolio App (Android), IoT door (Arduino).',
@@ -14,7 +14,7 @@ export default class WorldExplorer {
        story:'Flutter & Dart are home.\nBLoC, Provider, Clean Architecture keep the code maintainable.\n\nNode.js, MongoDB, PostgreSQL for backend. Java & Kotlin for native. Git, REST APIs, agile. A junior dev who takes craft seriously.',
        link:'#skills',linkText:'View Skills'},
       {id:'future',pos:[7,0,5],color:0xF48FB1,hex:'#F48FB1',icon:'🌟',title:"What's Next",
-       story:'Open to junior Flutter roles & freelance mobile projects.\n\nI bring clean-code habits, Flutter passion, agile mindset, and hunger to keep growing. I want to build apps that genuinely help people.\n\nLet\'s create something great together.',
+       story:'Beginning my Master\'s at Wright State University!\nOpen to freelance mobile projects.\n\nI bring clean-code habits, Flutter passion, agile mindset, and hunger to keep growing. Let\'s create something great together.',
        link:'#contact',linkText:"Let's Talk"},
     ];
 
